@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+section {
+  max-width: 80rem;
+  padding: 4rem 0 4rem;
+}
