@@ -27,7 +27,7 @@ const Navbar = () => {
           className="text-xl font-bold"
           onClick={() => scrollToSection("hero")}
         >
-          MyPortfolio
+          Yujie
         </button>
         <button
           className="md:hidden text-gray-700 focus:outline-none"
