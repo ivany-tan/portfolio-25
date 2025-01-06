@@ -23,7 +23,12 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-10">
       <div className="container mx-auto flex items-center justify-between p-4">
-        <div className="text-xl font-bold">MyPortfolio</div>
+        <button
+          className="text-xl font-bold"
+          onClick={() => scrollToSection("hero")}
+        >
+          MyPortfolio
+        </button>
         <button
           className="md:hidden text-gray-700 focus:outline-none"
           onClick={toggleMenu}
@@ -48,7 +53,7 @@ const Navbar = () => {
             isOpen ? "block" : "hidden"
           } absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent md:flex-row text-center md:text-left`}
         >
-          {["Hero", "About", "Experience", "Showcase"].map((section) => (
+          {["About", "Experience", "Showcase"].map((section) => (
             <li key={section} className="my-4 md:my-0">
               <button
                 onClick={() => scrollToSection(section.toLowerCase())}

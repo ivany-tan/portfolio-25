@@ -12,15 +12,21 @@
 }
 
 section {
-  @apply md:max-w-[80rem] py-12 px-5;
+  @apply md:max-w-[80rem] my-12 py-12 px-5;
 }
 
 .group section {
-  @apply p-4;
+  @apply p-4 my-0;
 }
 
 section h1 {
   @apply text-5xl font-black py-6 text-gray-300 uppercase justify-center text-center;
+}
+
+/* Experienece Section*/
+
+.vertical-timeline.vertical-timeline-custom-line::before {
+  background: #c5d1d1;
 }
 
 /* About Section */

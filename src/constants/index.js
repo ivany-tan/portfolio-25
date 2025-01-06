@@ -1,3 +1,42 @@
+const experiences = [
+  {
+    title: "Next.js Developer",
+    company_name: "Circula Ltd.",
+    icon: "/icons/circula.png",
+    icon_bg: "#076964",
+    date: "Aug 2024 - Nov 2024",
+    points: [
+      "Restructured folder architecture and optimized dynamic routing using Next.js features, achieving a clean, efficient app structure that enhanced navigability and scalability.",
+      "Elevated code quality and readability by refactoring and modularizing components, facilitating maintainability and adaptability to evolving project needs. Configured Tailwind CSS to streamline component styling, improving clarity and debugging efficiency.",
+      "Strengthened project outcomes through effective sprint planning, user story updates, and critical decision-making on tech directions, driving successful Agile collaboration with a 5-member diverse team to consistently meet sprint objectives and deliver high-quality results.",
+    ],
+  },
+  {
+    title: "Gaming Backend Algorithm Developer",
+    company_name: "University AI Planning for Splandor",
+    icon: "/icons/splendor.png",
+    icon_bg: "#fdf245",
+    date: "Apr 2024 - May 2024",
+    points: [
+      "Constructed and developed a Monte Carlo Tree Search (MCTs) algorithm from scratch, achieving optimal game strategies by iterating through selection, expansion, simulation, and backpropagation phases. This resulted in securing a top 3 position among over 90 teams, including 5 teaching staff teams, by leveraging the UCT algorithm for highest reward calculations, each with distinct policy and reward computation based on well-designed game strategies.",
+      "Adopted an Agile approach to ensure timely and high-quality deliverables, by bi-weekly standup meeting and utilizing Gantt charts for project tracking, which significantly improved team coordination and project management, resulting in the completion of the project within 3.5 weeks and achieving a top 3 ranking for the final product.",
+    ],
+  },
+  {
+    title: "Full Stack Developer",
+    company_name: "University Internship",
+    icon: "/icons/unimelb.png",
+    icon_bg: "#6fa5d9",
+    date: "Nov 2023- Mar 2024",
+    points: [
+      "Enhanced Client-Server communication and boosted system efficiency by 30% through implementing a RESTful API with stateless architecture, leveraging rigorous design principles.",
+      "Fortified data security by 30% and reduced unauthorized access, mitigating potential security Express.js, incorporating best practices in security and data protection.",
+      "Improved query performance by 40% and supported evolving business models, by migrating to a MongoDB-based data infrastructure for agile data manipulation, utilizing MongoDB’s dynamic schema and adapting database design to business needs.",
+      "Achieved a 99.9% uptime and expanded global service availability, by deploying a scalable front-end React application on Firebase and a Node.js/Express.js backend on Heroku, leveraging cloud-native technologies and continuous deployment strategies for optimal performance and scalability.",
+    ],
+  },
+];
+
 const projectItems = [
   {
     id: 1,
@@ -44,4 +83,4 @@ const socialMedia = [
   },
 ];
 
-export { projectItems, socialMedia };
+export { experiences, projectItems, socialMedia };
