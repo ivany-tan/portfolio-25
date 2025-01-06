@@ -7,20 +7,12 @@ import Showcase from "./sections/Showcase";
 
 const App = () => {
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center">
       <Navbar />
-      <div className="bg-blue-300 flex items-center justify-center">
-        <Hero />
-      </div>
-      <div className="bg-green-300 flex items-center justify-center">
-        <About />
-      </div>
-      <div className="bg-yellow-300 flex items-center justify-center">
-        <Experience />
-      </div>
-      <div className="bg-red-300 flex items-center justify-center">
-        <Showcase />
-      </div>
+      <Hero />
+      <About />
+      <Experience />
+      <Showcase />
     </div>
   );
 };
