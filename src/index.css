@@ -12,11 +12,15 @@
 }
 
 section {
-  @apply max-w-[80rem] py-10;
+  @apply md:max-w-[80rem] py-12 px-5;
+}
+
+.group section {
+  @apply p-4;
 }
 
 section h1 {
-  @apply text-3xl font-black pb-10 text-gray-300 uppercase;
+  @apply text-5xl font-black py-6 text-gray-300 uppercase justify-center text-center;
 }
 
 /* About Section */
