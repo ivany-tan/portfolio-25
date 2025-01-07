@@ -1,3 +1,8 @@
+/**
+ * set base in vite config /repo name/
+ * import base here and update dynamic path for images and icons
+ */
+
 const base = import.meta.env.BASE_URL;
 
 const experiences = [
@@ -17,6 +22,7 @@ const experiences = [
   {
     title: "Gaming Backend Algorithm Developer",
     company_name: "University AI Planning for Splandor",
+    // icon: "icons/splendor.png",
     icon: `${base}icons/splendor.png`,
     icon_bg: "#fdf245",
     date: "Apr 2024 - May 2024",
@@ -28,6 +34,7 @@ const experiences = [
   {
     title: "Full Stack Developer",
     company_name: "University Internship",
+    // icon: "icons/unimelb.png",
     icon: `${base}icons/unimelb.png`,
     icon_bg: "#6fa5d9",
     date: "Nov 2023- Mar 2024",
@@ -68,6 +75,7 @@ const projectItems = [
     icon: "🏃🏽‍♀️‍➡️",
     label: "How to Find Ur Grandma",
     title: "How to Find Ur Grandma",
+    // img: "images/grandma.png",
     img: `${base}images/grandma.png`,
     description:
       "This Android app is designed to help seniors track their exercise routines and ensure safety during walks. Family members can monitor real-time routes, check-ins, and shared activity data, fostering better communication and safety. Key features include real-time route tracking, calorie counters, photo capture along paths, and secure user authentication.",
