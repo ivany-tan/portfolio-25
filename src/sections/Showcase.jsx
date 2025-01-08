@@ -6,7 +6,7 @@ const Showcase = () => {
   return (
     <section id="showcase">
       <h1>SHOWCASE</h1>
-      <div className="my-10 flex flex-col gap-11">
+      <div className="my-10 flex flex-col gap-8 sm:gap-11">
         {projectItems.map((item) => (
           <ProjectCard
             key={item.id}
