@@ -13,10 +13,10 @@ function ProjectCard({ id, icon, title, img, description, tech }) {
           className="lg:pl-10 sm:pr-2 sm:pt-4 
         sm:max-w-[60%] flex flex-col h-full sm:group-even:ml-[40%]"
         >
-          <h3 className="text-2xl lg:text-3xl lg:pb-3 font-extrabold">
+          <h3 className="mb-2 text-2xl lg:text-3xl lg:pb-3 font-extrabold">
             {icon} {title}
           </h3>
-          <p className="leading-relaxed text-gray-700 text-[1rem] lg:text-[18px]">
+          <p className="mb-2 leading-relaxed text-gray-700 text-[1rem] lg:text-[18px]">
             {description}
           </p>
           <ul className="flex flex-wrap mt-2 gap-2 sm:gap-3 sm:mt-auto">
