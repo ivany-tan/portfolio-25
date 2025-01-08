@@ -12,7 +12,7 @@
 }
 
 section {
-  @apply md:max-w-[80rem] my-12 py-12 px-5;
+  @apply max-w-[80rem] my-4 sm:my-12 py-0 sm:py-12 px-5;
 }
 
 .group section {
@@ -68,6 +68,14 @@ section h1 {
 
 .bento-grid {
   @apply grid lg:grid-cols-4 md:grid-cols-3 lg:auto-rows-[300px] auto-rows-[220px] gap-2;
+}
+
+.bento-grid .content > p {
+  @apply text-[1rem];
+}
+
+.bento-grid .content > h2 {
+  @apply text-[1.5rem] sm:text-[2rem];
 }
 
 .single-grid {

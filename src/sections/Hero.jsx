@@ -1,70 +1,109 @@
-import React from "react";
+import { Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
+import CanvasLoader from "../components/CanvasLoader.jsx";
+import HeroCamera from "../components/HeroCamera.jsx";
+import { useMediaQuery } from "react-responsive";
+// import { Leva, useControls } from "leva";
+import { PerspectiveCamera } from "@react-three/drei";
+import { motion } from "framer-motion";
+import { styles } from "../styles";
+import { Workbench } from "../components/Workbench.jsx";
+
+const ScrollDown = () => {
+  return (
+    <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
+      <a href="#about">
+        <div className="w-[35px] h-[64px] rounded-3xl border-4 border-blue-100 flex justify-center items-start p-2">
+          <motion.div
+            animate={{
+              y: [0, 24, 0],
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              repeatType: "loop",
+            }}
+            className="w-3 h-3 rounded-full bg-secondary mb-1 bg-blue"
+          />
+        </div>
+      </a>
+    </div>
+  );
+};
+
+const WorkbenchCanvas = () => {
+  // const x = useControls("Workbench", {
+  //   positionX: { value: 0.5, min: -10, max: 10 },
+  //   positionY: { value: 0.5, min: -10, max: 10 },
+  //   positionZ: { value: 0.5, min: -10, max: 10 },
+
+  //   rotationX: { value: 0, min: -10, max: 10 },
+  //   rotationY: { value: 0, min: -10, max: 10 },
+  //   rotationZ: { value: 0, min: -10, max: 10 },
+
+  //   scale: { value: 1, min: 0.05, max: 5 },
+  // });
+
+  const model = {
+    positionX: -0.3,
+    positionY: -3.9,
+    positionZ: 0.3,
+    rotationX: 0.4,
+    rotationY: -1.8,
+    rotationZ: 0.2,
+    sacle: 3,
+  };
+
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+
+  return (
+    <div className="w-full h-full absolute inset-0">
+      {/* <Leva /> */}
+      <Canvas className="w-full h-full">
+        <Suspense fallback={<CanvasLoader />}>
+          <PerspectiveCamera makeDefault position={[0, 0, 30]} />
+          <HeroCamera isMobile={isMobile}>
+            {/* <Workbench
+              scale={x.scale}
+              position={[x.positionX, x.positionY, x.positionZ]}
+              rotation={[x.rotationX, x.rotationY, x.rotationZ]}
+            /> */}
+            <Workbench
+              scale={isMobile ? 2.5 : model.sacle}
+              position={[model.positionX, model.positionY, model.positionZ]}
+              rotation={[model.rotationX, model.rotationY, model.rotationZ]}
+            />
+          </HeroCamera>
+          <ambientLight intensity={1} />
+          <directionalLight position={[10, 10, 10]} intensity={0.5} />
+        </Suspense>
+      </Canvas>
+    </div>
+  );
+};
 
 const Hero = () => {
   return (
-    <section id="hero" className="mt-[64px]">
-      <h1>HERO</h1>
-      <p>
-        Lorem ipsum odor amet, consectetuer adipiscing elit. Curae interdum
-        bibendum, interdum dis tellus facilisis praesent penatibus. Tempus magna
-        nulla interdum in, suspendisse varius gravida. Velit suscipit cras erat
-        tempor dolor ultrices venenatis. Semper phasellus ultricies eleifend
-        nullam proin hendrerit. Facilisis potenti vulputate netus quis congue;
-        mattis lectus urna. Suspendisse eleifend nibh laoreet mus venenatis
-        penatibus fusce turpis. Gravida phasellus ante congue risus magna; augue
-        est? Hac venenatis aliquet facilisi nam donec. <br /> Hendrerit quisque
-        himenaeos diam mi molestie sollicitudin ut egestas sagittis. Penatibus
-        conubia tortor fringilla nullam morbi blandit pellentesque. Cubilia
-        ultrices scelerisque rutrum nascetur sit accumsan sagittis arcu.
-        Maecenas rhoncus phasellus malesuada efficitur penatibus. Natoque enim
-        class primis velit cubilia sit commodo urna. Sit ornare dignissim eros
-        ipsum egestas consectetur curabitur. <br /> Lorem volutpat eros
-        hendrerit dapibus eros tincidunt. Quis per maximus rhoncus arcu
-        placerat. Consectetur hac euismod nam tempus velit auctor ornare. Ad
-        justo ridiculus volutpat ex nisl natoque maecenas. Enim euismod sociosqu
-        pretium parturient mus interdum vestibulum at. Et in ornare luctus
-        turpis, sodales dignissim. Phasellus augue imperdiet tempor netus porta
-        aptent. Velit eget ante ante aptent penatibus, dignissim sit commodo.
-        Nascetur finibus nec placerat porttitor sodales. Nam lectus tempor
-        magnis, bibendum pharetra felis in. Gravida massa mus imperdiet platea,
-        convallis a convallis class neque. Penatibus dis facilisi sagittis
-        facilisi a vehicula. Diam vestibulum eros varius fusce at.Lorem ipsum
-        odor amet, consectetuer adipiscing elit. <br /> Curae interdum bibendum,
-        interdum dis tellus facilisis praesent penatibus. Tempus magna nulla
-        interdum in, suspendisse varius gravida. Velit suscipit cras erat tempor
-        dolor ultrices venenatis. Semper phasellus ultricies eleifend nullam
-        proin hendrerit. Facilisis potenti vulputate netus quis congue; mattis
-        lectus urna. Suspendisse eleifend nibh laoreet mus venenatis penatibus
-        fusce turpis. Gravida phasellus ante congue risus magna; augue est? Hac
-        venenatis aliquet facilisi nam donec. Hendrerit quisque himenaeos diam
-        mi molestie sollicitudin ut egestas sagittis. Penatibus conubia tortor
-        fringilla nullam morbi blandit pellentesque. Cubilia ultrices
-        scelerisque rutrum nascetur sit accumsan sagittis arcu. Maecenas rhoncus
-        phasellus malesuada efficitur penatibus. Natoque enim class primis velit
-        cubilia sit commodo urna. Sit ornare dignissim eros ipsum egestas
-        consectetur curabitur. Lorem volutpat eros hendrerit dapibus eros
-        tincidunt. Quis per maximus rhoncus arcu placerat. Consectetur hac
-        euismod nam tempus velit auctor ornare. Ad justo ridiculus volutpat ex
-        nisl natoque maecenas. Enim euismod sociosqu pretium parturient mus
-        interdum vestibulum at. <br /> Et in ornare luctus turpis, sodales
-        dignissim. Phasellus augue imperdiet tempor netus porta aptent. Velit
-        eget ante ante aptent penatibus, dignissim sit commodo. Nascetur finibus
-        nec placerat porttitor sodales. Nam lectus tempor magnis, bibendum
-        pharetra felis in. Gravida massa mus imperdiet platea, convallis a
-        convallis class neque. Penatibus dis facilisi sagittis facilisi a
-        vehicula. Diam vestibulum eros varius fusce at. Molestie egestas
-        imperdiet nullam malesuada, nascetur aliquet quam nascetur senectus.
-        Fusce aliquet aliquam consequat ullamcorper tristique cras. Cursus dolor
-        condimentum vitae, ad condimentum placerat.
-        <br /> Nec amet eros quisque nam consequat dolor nisi. Integer fusce
-        augue mattis ante fames feugiat duis. Vitae auctor eleifend ex ex diam
-        nostra, senectus posuere? Molestie egestas imperdiet nullam malesuada,
-        nascetur aliquet quam nascetur senectus. Fusce aliquet aliquam consequat
-        ullamcorper tristique cras. Cursus dolor condimentum vitae, ad
-        condimentum placerat. Nec amet eros quisque nam consequat dolor nisi.
-        Integer fusce augue mattis ante fames feugiat duis. Vitae auctor
-        eleifend ex ex diam nostra, senectus posuere?
-      </p>
+    <section
+      id="hero"
+      className={`relative w-full h-screen mx-auto overflow-hidden`}
+    >
+      <div
+        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+      >
+        <div className="flex flex-col justify-center text-center sm:text-left align-middle">
+          <h1 className={`${styles.heroHeadText} text-blue-100`}>
+            Hi, I'm <span className="text-navy">Yujie</span>
+          </h1>
+          <p className={`${styles.heroSubText} mt-2 text-blue-100`}>
+            I build seamless and <br className="sm:block hidden" />
+            responsive web applications.
+          </p>
+        </div>
+      </div>
+
+      <WorkbenchCanvas />
+      <ScrollDown />
     </section>
   );
 };

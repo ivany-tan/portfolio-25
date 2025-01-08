@@ -46,3 +46,9 @@ export default {
   plugins: [],
 };
 ```
+
+Install 3D model libraries.
+
+```bash
+npm install react react-dom @react-three/fiber @react-three/drei react-responsive framer-motion maath
+```
