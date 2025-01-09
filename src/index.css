@@ -11,20 +11,26 @@
   color-scheme: light;
 }
 
+/* Sections */
+
 section {
-  @apply max-w-[80rem] my-4 sm:my-12 py-0 sm:py-12 px-5;
+  @apply max-w-[80rem] my-8 sm:my-8 px-5;
 }
 
 .group section {
-  @apply p-2 sm:p-4 my-0;
+  @apply p-4 my-0;
 }
 
 section h1 {
-  @apply text-5xl font-black py-6 text-gray-300 uppercase justify-center text-center;
+  @apply text-5xl lg:text-[68px] font-black py-6 text-gray-300 uppercase justify-center text-center;
 }
 
 #showcase h1 {
-  @apply pb-0;
+  @apply pb-0 sm:pb-6;
+}
+
+#about {
+  scroll-margin-top: 60px; /* Adjust to the height of your navbar */
 }
 
 /* Experienece Section*/

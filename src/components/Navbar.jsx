@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+const base = import.meta.env.BASE_URL;
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,12 +25,18 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-10">
       <div className="container mx-auto flex items-center justify-between p-4">
-        <button
+        {/* <button
           className="text-xl font-bold"
           onClick={() => scrollToSection("hero")}
         >
           Yujie
-        </button>
+        </button> */}
+        <a href="/" className="flex items-center space-x-2">
+          {/* Icon */}
+          <img src={`${base}web.svg`} alt="Web Logo" className="w-6 h-6" />
+          {/* Name */}
+          <span className="text-xl font-bold">YJT</span>
+        </a>
         <button
           className="md:hidden text-gray-700 focus:outline-none"
           onClick={toggleMenu}

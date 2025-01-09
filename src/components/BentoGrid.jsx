@@ -1,9 +1,3 @@
-/**
- * TODO:
- * 1. ...
- * 2. ...
- */
-
 import React, { useState } from "react";
 import { socialMedia } from "../constants";
 import {
@@ -107,13 +101,13 @@ export const FiveGrid = () => {
   const getSpanClasses = (id) => {
     let classes = "";
     if (id === 1 || id === 5) {
-      classes += " lg:col-span-2 card";
+      classes += "lg:col-span-2 card";
     }
     if (id === 2 || id === 4) {
       classes += "card";
     }
     if (id === 3) {
-      classes += " lg:row-span-2 md:row-span-2 vertical-card";
+      classes += "lg:row-span-2 md:row-span-2 vertical-card";
     }
     return classes;
   };

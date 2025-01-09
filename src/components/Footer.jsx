@@ -5,7 +5,7 @@ const Footer = () => {
     startYear === currentYear ? currentYear : `${startYear}–${currentYear}`;
 
   return (
-    <footer className="flex justify-center py-10">
+    <footer className="flex justify-center py-5 sm:py-10">
       <p className="text-gray-300 cursor-default">
         © {displayYear} <strong>Yujie Tan</strong>. All rights reserved.
       </p>
