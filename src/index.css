@@ -14,7 +14,7 @@
 /* Sections */
 
 section {
-  @apply max-w-[80rem] my-8 sm:my-8 px-5;
+  @apply max-w-[80rem] my-4 px-5;
 }
 
 .group section {
@@ -22,7 +22,7 @@ section {
 }
 
 section h1 {
-  @apply text-5xl lg:text-[68px] font-black py-6 text-gray-300 uppercase justify-center text-center;
+  @apply text-5xl lg:text-6xl font-black py-6 text-gray-300 uppercase justify-center text-center;
 }
 
 #showcase h1 {
@@ -31,6 +31,15 @@ section h1 {
 
 #about {
   scroll-margin-top: 60px; /* Adjust to the height of your navbar */
+}
+
+#hero {
+  @apply mt-0;
+}
+
+#experience,
+#showcase {
+  @apply my-4 sm:my-12;
 }
 
 /* Experienece Section*/
