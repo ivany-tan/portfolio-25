@@ -25,13 +25,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-10">
       <div className="container mx-auto flex items-center justify-between p-4">
-        {/* <button
-          className="text-xl font-bold"
-          onClick={() => scrollToSection("hero")}
-        >
-          Yujie
-        </button> */}
-        <a href="/" className="flex items-center space-x-2">
+        <a href={`${base}`} className="flex items-center space-x-2">
           {/* Icon */}
           <img src={`${base}web.svg`} alt="Web Logo" className="w-6 h-6" />
           {/* Name */}
