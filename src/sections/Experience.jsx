@@ -5,6 +5,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { experiences } from "../constants";
+import { styles } from "../styles";
 
 const colors = {
   snow: "#FFFAFA",
@@ -68,7 +69,15 @@ const ExperienceCard = ({ experience }) => {
 const Experience = () => {
   return (
     <section id="experience">
-      <h1>EXPERIENCE</h1>
+      <h1 className={`${styles.sectionHeadText} text-center justify-center`}>
+        Experience
+      </h1>
+      <p
+        className={`${styles.sectionSubText} mb-10 md:px-[20%] text-center justify-center`}
+      >
+        I had full stack internships at univerity focusing on responsive web
+        development, gaming and NLP.
+      </p>
       <VerticalTimeline className="vertical-timeline vertical-timeline-custom-line">
         {experiences.map((experience, index) => (
           <ExperienceCard key={`experience-${index}`} experience={experience} />
