@@ -52,7 +52,7 @@ const Navbar = () => {
         </button>
         <ul
           className={`md:flex md:space-x-8 ${
-            isOpen ? "block" : "hidden"
+            isOpen ? "block shadow-lg rounded-lg" : "hidden"
           } absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent md:flex-row text-center md:text-left`}
         >
           {["About", "Experience", "Showcase"].map((section) => (

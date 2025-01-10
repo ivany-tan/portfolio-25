@@ -69,15 +69,17 @@ const ExperienceCard = ({ experience }) => {
 const Experience = () => {
   return (
     <section id="experience">
-      <h1 className={`${styles.sectionHeadText} text-center justify-center`}>
+      <p
+        className={`${styles.sectionSubText} md:px-[20%] text-center justify-center`}
+      >
+        Full stack internships for web development, gaming & NLP.
+      </p>
+      <h1
+        className={`${styles.sectionHeadText} text-center justify-center mb-10`}
+      >
         Experience
       </h1>
-      <p
-        className={`${styles.sectionSubText} mb-10 md:px-[20%] text-center justify-center`}
-      >
-        I had full stack internships at univerity focusing on responsive web
-        development, gaming and NLP.
-      </p>
+
       <VerticalTimeline className="vertical-timeline vertical-timeline-custom-line">
         {experiences.map((experience, index) => (
           <ExperienceCard key={`experience-${index}`} experience={experience} />

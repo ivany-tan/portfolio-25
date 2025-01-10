@@ -6,15 +6,17 @@ import { styles } from "../styles";
 const Showcase = () => {
   return (
     <section id="showcase">
-      <h1 className={`${styles.sectionHeadText} text-center justify-center`}>
+      <p
+        className={`${styles.sectionSubText} md:px-[20%] text-center justify-center`}
+      >
+        My selected works including responsive web & mobile development.
+      </p>
+      <h1
+        className={`${styles.sectionHeadText} text-center justify-center mb-10`}
+      >
         Showcase
       </h1>
-      <p
-        className={`${styles.sectionSubText} mb-10 md:px-[20%] text-center justify-center`}
-      >
-        The following shows my selected works including responsive web & mobile
-        development.
-      </p>
+
       <div className="my-10 flex flex-col gap-8 sm:gap-12">
         {projectItems.map((item) => (
           <ProjectCard

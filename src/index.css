@@ -6,7 +6,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: "Poppins", sans-serif; */
   scroll-behavior: smooth;
   color-scheme: light;
 }
@@ -14,20 +13,12 @@
 /* Sections */
 
 section {
-  @apply max-w-[80rem] my-12 px-5;
+  @apply max-w-[80rem] my-[3rem] px-5 py-2;
 }
 
 .group section {
   @apply p-4 my-0;
 }
-
-/* section h1 {
-  @apply text-5xl lg:text-6xl font-black py-6 text-gray-300 uppercase justify-center text-center;
-} */
-
-/* #showcase h1 {
-  @apply pb-0 sm:pb-6;
-} */
 
 #about {
   scroll-margin-top: 60px; /* Adjust to the height of your navbar */
@@ -39,7 +30,7 @@ section {
 
 #experience,
 #showcase {
-  @apply my-4 sm:my-12;
+  @apply sm:mt-[8rem];
 }
 
 /* Experienece Section*/
@@ -89,24 +80,16 @@ section {
   @apply grid lg:grid-cols-4 md:grid-cols-3 lg:auto-rows-[300px] auto-rows-[220px] gap-2;
 }
 
-/* .bento-grid .content > p {
-  @apply text-[1rem];
-}
-
-.bento-grid .content > h2 {
-  @apply text-[1.5rem] lg:text-[2rem];
-} */
-
 .single-grid {
   @apply shadow-lg rounded-[64px] flex flex-col items-center justify-center bg-cover bg-center;
 }
 
 .grid-subtitle {
-  @apply text-base md:leading-6 text-center;
+  @apply text-sm lg:text-base lg:leading-6 text-center;
 }
 
 .grid-title {
-  @apply text-[1.5rem] lg:text-[2rem] md:leading-8 font-bold text-center;
+  @apply text-[1.5rem] lg:text-[2rem] leading-6 lg:leading-8 font-bold text-center;
 }
 
 .grid-social-media-btn {
