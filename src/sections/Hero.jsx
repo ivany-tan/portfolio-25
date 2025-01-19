@@ -95,10 +95,35 @@ const Hero = () => {
           <h1 className={`${styles.heroHeadText} text-blue-100`}>
             Hi, I'm <span className="text-navy">Yujie</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-blue-100`}>
+          {/* <p className={`${styles.heroSubText} mt-2 text-blue-100`}>
             2 years of full-stack dev experience &nbsp;
             <br className="sm:block hidden" />
-            in React.js, Node.js, mySQL, MongoDB
+            in JavaScript, React.js, Next.js, &nbsp;
+            <br className="sm:block hidden" />
+            Node.js, mySQL and MongoDB
+          </p> */}
+          <p className={`${styles.heroSubText} mt-2 text-blue-100`}>
+            2 years of full-stack dev experience in
+          </p>
+          {/* <ul className="mt-2 text-blue sm:list-disc sm:list-inside sm:space-y-2 hidden sm:block">
+            <li>JavaScript</li>
+            <li>React.js</li>
+            <li>Next.js</li>
+            <li>Node.js</li>
+            <li>MySQL</li>
+            <li>MongoDB</li>
+          </ul> */}
+
+          {/* <p className="mt-2 text-blue">
+            JavaScript | React.js | Next.js | Node.js | MySQL | MongoDB
+          </p> */}
+          <p className="mt-2 text-blue">
+            JavaScript<span className="text-blue-300"> · </span>
+            React.js<span className="text-blue-300"> · </span>
+            Next.js<span className="text-blue-300"> · </span>
+            Node.js<span className="text-blue-300"> · </span>
+            MySQL<span className="text-blue-300"> · </span>
+            MongoDB
           </p>
         </div>
       </div>

@@ -8,7 +8,7 @@ const base = import.meta.env.BASE_URL;
 const experiences = [
   {
     title: "Frontend Developer",
-    company_name: "Circula App, Melbourne",
+    company_name: "Circula App, Sydney",
     // icon: "/icons/circula.png",
     icon: `${base}icons/circula.png`,
     icon_bg: "#076964",
