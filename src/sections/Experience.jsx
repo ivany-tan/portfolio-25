@@ -50,13 +50,16 @@ const ExperienceCard = ({ experience }) => {
         >
           {experience.company_name}
         </p>
+        <p style={{ fontSize: "14px", fontWeight: "400" }}>
+          Description & Responsibility: {experience.description}
+        </p>
       </div>
 
       <ul className="mt-5 list-disc ml-5 space-y-2">
         {experience.points.map((point, index) => (
           <li
             key={`experience-point-${index}`}
-            className="text-black-100 text-[14px] pl-1 tracking-wider"
+            className="text-black-100 text-[14px] pl-1"
           >
             {point}
           </li>
@@ -72,7 +75,7 @@ const Experience = () => {
       <p
         className={`${styles.sectionSubText} md:px-[20%] text-center justify-center`}
       >
-        Full stack internships for web development, gaming & NLP.
+        What I have done so far
       </p>
       <h1
         className={`${styles.sectionHeadText} text-center justify-center mb-10`}

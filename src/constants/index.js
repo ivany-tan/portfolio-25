@@ -7,42 +7,50 @@ const base = import.meta.env.BASE_URL;
 
 const experiences = [
   {
-    title: "Next.js Developer",
-    company_name: "Circula Ltd.",
+    title: "Frontend Developer",
+    company_name: "Circula App, Melbourne",
     // icon: "/icons/circula.png",
     icon: `${base}icons/circula.png`,
     icon_bg: "#076964",
     date: "Aug 2024 - Nov 2024",
+    description:
+      "Developed an interactive university-focused app that helps students discover events using an intuitive map-based interface like Airbnb and Google Map.",
     points: [
-      "Restructured folder architecture and optimized dynamic routing using Next.js features, achieving a clean, efficient app structure that enhanced navigability and scalability.",
-      "Elevated code quality and readability by refactoring and modularizing components, facilitating maintainability and adaptability to evolving project needs. Configured Tailwind CSS to streamline component styling, improving clarity and debugging efficiency.",
-      "Strengthened project outcomes through effective sprint planning, user story updates, and critical decision-making on tech directions, driving successful Agile collaboration with a 5-member diverse team to consistently meet sprint objectives and deliver high-quality results.",
+      "Built and optimized event detail pages by using React.js with TypeScript, allowing users to book and explore activities seamlessly, aligned with UI/UX designs from Figma.",
+      "Structured dynamic routing using Next.js core features to enhance app scalability and navigability.",
+      "Refactored and modularized components, improving code readability and maintainability for future iterations.",
+      "Led sprint planning and user story updates, driving successful outcomes in an Agile/Scrum environment",
     ],
   },
   {
-    title: "Gaming Backend Algorithm Developer",
-    company_name: "University AI Planning for Splandor",
+    title: "Gaming Backend Developer",
+    company_name: "Splandor AI Planning, Melbourne",
     // icon: "icons/splendor.png",
     icon: `${base}icons/splendor.png`,
     icon_bg: "#fdf245",
-    date: "Apr 2024 - May 2024",
+    date: "Mar 2024 - Jun 2024",
+    description:
+      "Implemented heuristic search algorithm to the Splender game, enabling making the best decision to win, given current conext.",
     points: [
-      "Constructed and developed a Monte Carlo Tree Search (MCTs) algorithm from scratch, achieving optimal game strategies by iterating through selection, expansion, simulation, and backpropagation phases. This resulted in securing a top 3 position among over 90 teams, including 5 teaching staff teams, by leveraging the UCT algorithm for highest reward calculations, each with distinct policy and reward computation based on well-designed game strategies.",
-      "Adopted an Agile approach to ensure timely and high-quality deliverables, by bi-weekly standup meeting and utilizing Gantt charts for project tracking, which significantly improved team coordination and project management, resulting in the completion of the project within 3.5 weeks and achieving a top 3 ranking for the final product.",
+      "Constructed and developed a Monte Carlo Tree Search (MCTs) algorithm from scratch, achieving optimal game strategies by iterating.",
+      "Achieved top 3 position among over 90 teams by leveraging the UCT algorithm for highest reward calculations, each with distinct policy and reward computation based on well-designed game strategies.",
     ],
   },
   {
     title: "Full Stack Developer",
-    company_name: "University Internship",
+    company_name: "University Internship, Melbourne",
     // icon: "icons/unimelb.png",
     icon: `${base}icons/unimelb.png`,
     icon_bg: "#6fa5d9",
     date: "Nov 2023- Mar 2024",
+    description:
+      "Built a membership and event management system for an education startup",
     points: [
-      "Enhanced Client-Server communication and boosted system efficiency by 30% through implementing a RESTful API with stateless architecture, leveraging rigorous design principles.",
-      "Fortified data security by 30% and reduced unauthorized access, mitigating potential security Express.js, incorporating best practices in security and data protection.",
-      "Improved query performance by 40% and supported evolving business models, by migrating to a MongoDB-based data infrastructure for agile data manipulation, utilizing MongoDB’s dynamic schema and adapting database design to business needs.",
-      "Achieved a 99.9% uptime and expanded global service availability, by deploying a scalable front-end React application on Firebase and a Node.js/Express.js backend on Heroku, leveraging cloud-native technologies and continuous deployment strategies for optimal performance and scalability.",
+      "Designed and developed a RESTful API to manage user and event data efficiently.",
+      "Implemented secure authentication and authorization protocols with Node.js, JWT, and cookies, ensuring data protection as an industry-grade security practice.",
+      "Created dynamic schemas and configured MongoDB Cloud database platform for agile data manipulation based on business needs.",
+      "Deployed a React.js frontend on Firebase and a backend on Heroku, achieving global scalability.",
+      "Invented a Netflix-like custom carousel for course display using vanilla JavaScript and React.js, without relying on any library.",
     ],
   },
 ];

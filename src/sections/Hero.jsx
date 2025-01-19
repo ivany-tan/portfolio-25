@@ -96,8 +96,9 @@ const Hero = () => {
             Hi, I'm <span className="text-navy">Yujie</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-blue-100`}>
-            I build seamless and <br className="sm:block hidden" />
-            responsive web applications.
+            2 years of full-stack dev experience &nbsp;
+            <br className="sm:block hidden" />
+            in React.js, Node.js, mySQL, MongoDB
           </p>
         </div>
       </div>

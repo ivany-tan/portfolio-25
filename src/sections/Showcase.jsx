@@ -9,7 +9,7 @@ const Showcase = () => {
       <p
         className={`${styles.sectionSubText} md:px-[20%] text-center justify-center`}
       >
-        My selected works including responsive web & mobile development.
+        My selected works
       </p>
       <h1
         className={`${styles.sectionHeadText} text-center justify-center mb-10`}
