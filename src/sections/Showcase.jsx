@@ -2,20 +2,17 @@ import React from "react";
 import { projectItems } from "../constants";
 import ProjectCard from "../components/ProjectCard";
 import { styles } from "../styles";
+import AnimatedHeading from "../components/AnimatedHeading";
 
 const Showcase = () => {
   return (
     <section id="showcase">
-      <p
-        className={`${styles.sectionSubText} md:px-[20%] text-center justify-center`}
-      >
-        My selected works
-      </p>
-      <h1
-        className={`${styles.sectionHeadText} text-center justify-center mb-10`}
-      >
-        Showcase
-      </h1>
+      <AnimatedHeading
+        subheading="My selected works"
+        heading="Showcase"
+        subheadingClassName={`${styles.sectionSubText} md:px-[20%]`}
+        headingClassName={`${styles.sectionHeadText} mb-10`}
+      />
 
       <div className="my-10 flex flex-col gap-8 sm:gap-12">
         {projectItems.map((item) => (

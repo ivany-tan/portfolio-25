@@ -44,7 +44,7 @@ const experiences = [
     icon_bg: "#6fa5d9",
     date: "Nov 2023- Mar 2024",
     description:
-      "Built a membership and event management system for an education startup",
+      "Built a membership and event management system for an education startup.",
     points: [
       "Designed and developed a RESTful API to manage user and event data efficiently.",
       "Implemented secure authentication and authorization protocols with Node.js, JWT, and cookies, ensuring data protection as an industry-grade security practice.",

@@ -6,6 +6,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { experiences } from "../constants";
 import { styles } from "../styles";
+import AnimatedHeading from "../components/AnimatedHeading";
 
 const colors = {
   snow: "#FFFAFA",
@@ -72,16 +73,12 @@ const ExperienceCard = ({ experience }) => {
 const Experience = () => {
   return (
     <section id="experience">
-      <p
-        className={`${styles.sectionSubText} md:px-[20%] text-center justify-center`}
-      >
-        What I have done so far
-      </p>
-      <h1
-        className={`${styles.sectionHeadText} text-center justify-center mb-10`}
-      >
-        Experience
-      </h1>
+      <AnimatedHeading
+        subheading="What I have done so far"
+        heading="Experience"
+        subheadingClassName={`${styles.sectionSubText} md:px-[20%]`}
+        headingClassName={`${styles.sectionHeadText} mb-10`}
+      />
 
       <VerticalTimeline className="vertical-timeline vertical-timeline-custom-line">
         {experiences.map((experience, index) => (

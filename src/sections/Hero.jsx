@@ -82,42 +82,156 @@ const WorkbenchCanvas = () => {
   );
 };
 
+// const Hero = () => {
+//   return (
+//     <section
+//       id="hero"
+//       className={`relative w-full h-screen mx-auto overflow-hidden`}
+//     >
+//       <div
+//         className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+//       >
+//         <div className="flex flex-col justify-center text-center sm:text-left align-middle">
+//           <h1 className={`${styles.heroHeadText} text-blue-100`}>
+//             Hi, I'm <span className="text-navy">Yujie</span>
+//           </h1>
+//           <p className={`${styles.heroSubText} mt-2 text-blue-100`}>
+//             2 years of full-stack dev experience in
+//           </p>
+//           <p className="mt-2 text-blue">
+//             JavaScript<span className="text-blue-300"> · </span>
+//             React.js<span className="text-blue-300"> · </span>
+//             Next.js<span className="text-blue-300"> · </span>
+//             Node.js<span className="text-blue-300"> · </span>
+//             MySQL<span className="text-blue-300"> · </span>
+//             MongoDB
+//           </p>
+//         </div>
+//       </div>
+
+//       <WorkbenchCanvas />
+//       <ScrollDown />
+//     </section>
+//   );
+// };
+
+// export default Hero;
+
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const Hero = () => {
+  const headingRef = useRef(null);
+  const subheadingRef = useRef(null);
+  const subheadingTextRef = useRef(null);
+
+  useEffect(() => {
+    // Split heading into individual words
+    const headingWords = gsap.utils.toArray(
+      headingRef.current.querySelectorAll("span")
+    );
+
+    // Animate heading words with stagger
+    gsap.fromTo(
+      headingWords,
+      {
+        y: 100, // Start each word below
+        opacity: 0,
+        scale: 0.8,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        duration: 1.2,
+        ease: "elastic.out(1, 0.75)", // Bouncing effect
+        stagger: 0.2, // Delay between each word
+        scrollTrigger: {
+          trigger: headingRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      }
+    );
+
+    // Animate subheading with a smooth slide-in
+    gsap.fromTo(
+      subheadingRef.current,
+      {
+        y: 50, // Slide from below
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        delay: 0.5, // Wait for heading animation
+        scrollTrigger: {
+          trigger: subheadingRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      }
+    );
+
+    // Animate subheading additional text
+    gsap.fromTo(
+      subheadingTextRef.current,
+      {
+        y: 20,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        delay: 1, // Slight delay for smooth transition
+        scrollTrigger: {
+          trigger: subheadingTextRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      }
+    );
+  }, []);
+
   return (
     <section
       id="hero"
       className={`relative w-full h-screen mx-auto overflow-hidden`}
     >
       <div
-        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto px-5 flex flex-row items-start gap-5`}
       >
         <div className="flex flex-col justify-center text-center sm:text-left align-middle">
-          <h1 className={`${styles.heroHeadText} text-blue-100`}>
-            Hi, I'm <span className="text-navy">Yujie</span>
+          {/* Heading */}
+          <h1
+            ref={headingRef}
+            className={`${styles.heroHeadText} text-blue-100`}
+          >
+            {`Hi, I'm `.split(" ").map((word, index) => (
+              <span key={index} className="inline-block">
+                {word}&nbsp;
+              </span>
+            ))}
+            <span className="text-navy">Yujie</span>
           </h1>
-          {/* <p className={`${styles.heroSubText} mt-2 text-blue-100`}>
-            2 years of full-stack dev experience &nbsp;
-            <br className="sm:block hidden" />
-            in JavaScript, React.js, Next.js, &nbsp;
-            <br className="sm:block hidden" />
-            Node.js, mySQL and MongoDB
-          </p> */}
-          <p className={`${styles.heroSubText} mt-2 text-blue-100`}>
+
+          {/* Subheading */}
+          <p
+            ref={subheadingRef}
+            className={`${styles.heroSubText} mt-2 text-blue-100`}
+          >
             2 years of full-stack dev experience in
           </p>
-          {/* <ul className="mt-2 text-blue sm:list-disc sm:list-inside sm:space-y-2 hidden sm:block">
-            <li>JavaScript</li>
-            <li>React.js</li>
-            <li>Next.js</li>
-            <li>Node.js</li>
-            <li>MySQL</li>
-            <li>MongoDB</li>
-          </ul> */}
 
-          {/* <p className="mt-2 text-blue">
-            JavaScript | React.js | Next.js | Node.js | MySQL | MongoDB
-          </p> */}
-          <p className="mt-2 text-blue">
+          {/* Technologies */}
+          <p ref={subheadingTextRef} className="mt-2 text-blue">
             JavaScript<span className="text-blue-300"> · </span>
             React.js<span className="text-blue-300"> · </span>
             Next.js<span className="text-blue-300"> · </span>
